@@ -1,0 +1,26 @@
+.encoding-display {
+  width: 100%;
+  height: 100%;
+}
+
+.encoding-display__wrapper_top {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  height: 30%;
+
+}
+
+.encoding-display__wrapper_bottom {
+  height: 70%;
+}
+
+.encoding-display_h1 {
+  text-align: center;
+  margin: 30px;
+}
+
+.encoding-display_h2 {
+  text-align: center;
+}

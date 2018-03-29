@@ -1,0 +1,26 @@
+/* MODULAR
+=============<*/
+.pane {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  max-width: 600px;;
+  min-width: 500px;
+  height: 80%;
+  min-height: 628px;
+  border: 10px solid hsl(200, 100%, 20%);
+
+}
+
+/* SPECIFIC
+=============<*/
+.pane_user-input {
+  /* display: none; */
+}
+
+.pane_encoding-selection {
+  display: none;
+}
+.pane_encoding-display {
+  display: none;
+}

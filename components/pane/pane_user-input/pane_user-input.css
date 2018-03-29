@@ -1,0 +1,52 @@
+/* .pane_user-input {
+  display: block;
+} */
+
+.pane__h1_user-input {
+  margin: 30px;
+}
+
+.pane__input_user-input {
+  width: 100px;
+  height: 100px;
+  margin: 30px;
+  font-size: 100px;
+  text-align: center;
+}
+
+.pane__wrapper_user-input_current-encoding {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pane__h2_user-input_current-encoding {
+  margin: 10px;
+}
+
+.pane__h3_user-input_current-encoding {
+  margin: 10px;
+  color: hsl(200, 100%, 20%)
+}
+
+.pane__h2_user-input_in-binary {
+  margin: 10px;
+}
+
+.pane_wrapper_user-input-sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100px
+}
+
+.pane__wrapper_user-input_bottom {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  margin: 15px;
+}

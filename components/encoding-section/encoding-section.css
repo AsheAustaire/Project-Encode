@@ -1,0 +1,40 @@
+.encoding-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+}
+
+.encoding-tile {
+  border: 2px solid hsl(0, 0%, 0%);
+}
+
+.encoding-section__tile {
+  display: flex;
+}
+
+.encoding-section__h1 {
+  display: inline-block;
+  align-self: center;
+  margin: 30px 0
+}
+
+.encoding-section__img_x {
+  width: 20px;
+  height: 20px;
+}
+
+.encoding-section__wrapper_tiles {
+  margin: 30px;
+}
+
+.encoding-section__tile {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px;
+  border: 2px dashed hsl(0, 0%, 0%);
+}
+
+.encoding-section__h3 {
+  margin: 5px;
+}

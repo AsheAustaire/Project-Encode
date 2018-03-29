@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>project encode</title>
+  <link rel='stylesheet' href='./components/reset.css'/>
+  <link rel='stylesheet' href='./components/stylesheet.css'/>
+</head>
+
+<body class='body'>
+  <div class='body__wrapper'>
+
+    <div class='pane pane_user-input'>
+      <form id='usr-input-form' class='form'>
+        <h1 class='text__h1 pane__h1_user-input'>Input Character</h1>
+        <input id='usr-input-input' class='pane__input_user-input' maxlength="1" type="text" name="character" value="">
+        <button class='button button_submit' type='submit' name='button'>submit</button>
+        <div class='pane__wrapper_user-input_bottom'>
+          <div class='pane__wrapper_user-input_bottom'>
+            <div class='pane__wrapper_user-input_current-encoding'>
+              <div class='pane_wrapper_user-input-sub'>
+                <h2 class='text__h2 pane__h2_user-input_current-encoding'>Possible Encoding</h2>
+                <h3 id='usr-input-encoding-text' class='text__h3 pane__h3_user-input_current-encoding'>&nbsp</h3>
+              </div>
+              <div class='pane_wrapper_user-input-sub'>
+                <h2 class='text__h2 pane__h2_user-input_in-binary'>In Binary</h2>
+                <h3 id='usr-input-binary-text' class='text__h3 pane__h3_user-input_current-encoding'>&nbsp</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class='pane pane_encoding-selection'>
+      <div class='encoding-section'>
+        <h1 class='text__h1 encoding-section__h1'>Encoding Types</h1>
+        <div class='encoding-section__wrapper_tiles'>
+          <div class='encoding-section__tile'>
+            <img class='encoding-section__img_x' src='./components/encoding-section/cancel.svg' />
+            <h3 class='text__h3 encoding-section__h3'>UTF-8</h3>
+          </div>
+        </div>
+      </div>
+      <div class='encoding-section'>
+        <h1 class='text__h1 encoding-section__h1'>Chosen Types</h1>
+        <div class='encoding-section__wrapper_tiles'>
+          <div class='encoding-section__tile'>
+            <img class='encoding-section__img_x' src='./components/encoding-section/cancel.svg' />
+            <h3 class='text__h3 encoding-section__h3'>UTF-8</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='pane pane_encoding-display'>
+      <div class='encoding-display'>
+        <div class='encoding-display__wrapper_top'>
+          <h1 class='text__h2 encoding-display_h1'>Original Encoding</h1>
+          <h2 class='text__h3 encoding-display_h2'>UTF-8 A</h2>
+        </div>
+        <div class='encoding-display__wrapper_bottom'>
+          <div class='encoding-display__table'>
+            <div class='encoding-display__table__wrapper'>
+            <table class='encoding-display__table'>
+              <tr class='encoding-display__table_row'>
+                <td class='encoding-display__table_data'>UTF-8</td>
+                <td class='encoding-display__table_data'>A</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src='./components/pane/pane_user-input/pane_user-input.js'></script>
+</body>
+
+</html>
+
+<!--
+  <form id='form' class='form'>
+    <div class='form__tile'>
+      <label class='form__label_user-string' for='[object Object]'>User String</label>
+      <input id='form__input_user-string' class='form__input_user-string' type="text" name="user-char" value=""></input>
+    </div>
+    <div class='form__tile'>
+      <label class='form__label_binary_output' for='[object Object]'>Binary Output</label>
+      <textarea id='form__output_bin-string' class='form__output_bin-string' type="text" name="user-char" value=""></textarea>
+    </div>
+  </form>
+  <section class='encoding-tile'>
+    <h1 class='encoding-tile__h1'>TEST</h1>
+
+  </section> -->

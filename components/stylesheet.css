@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+/* FONTS
+=============<*/
+
+/* MODULAR COMPONENTS
+=============<*/
+@import url('./body/body.css');
+@import url('./form/form.css');
+@import url('./text/text.css');
+@import url('./table/table.css');
+@import url('./button/button.css');
+@import url('./pane/pane.css');
+@import url('./encoding-section/encoding-section.css');
+@import url('./button/button.css');
+
+/* SPECIFIC COMPONENTS
+=============<*/
+@import url('./pane/pane_user-input/pane_user-input.css');
+@import url('./pane/pane_encoding-selection/pane_encoding-selection.css');
+@import url('./pane/pane_encoding-display/pane_encoding-display.css');
+
+/* GENERAL STYLES
+=============<*/
+
+html, body  {
+  width: 100%;
+  height: 100%;
+}
