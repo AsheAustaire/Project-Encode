@@ -19,12 +19,12 @@
 }
 
 .fadeOut {
-  animation: fadeOut 1s ease-in;
+  animation: fadeOut .5s ease-in;
   animation-fill-mode: both;
 }
 
 .fadeIn {
-  animation: fadeIn 1s ease-in;
+  animation: fadeIn 1.2s ease-in;
   animation-fill-mode: both;
 }
 
@@ -37,11 +37,11 @@
 } */
 
 @keyframes fadeOut {
-  0% {opacity: 1; right: calc(50% - 300px);}
+  0% {opacity: 1; right: calc(50% - 305px);}
   100% {opacity: 0; right: calc(50% - 250px);}
 }
 
 @keyframes fadeIn {
-  0% {opacity: 0; }
-  100% {opacity: 1;}
+  0% {opacity: 0; right: calc(50% - 400px)}
+  100% {opacity: 1; right: calc(50% - 310px)}
 }
