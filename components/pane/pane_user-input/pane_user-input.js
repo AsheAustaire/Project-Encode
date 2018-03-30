@@ -1,4 +1,6 @@
 const userInputPane = {
+  pane: document.body.querySelector('#pane_user-input'),
+  nextPane: document.body.querySelector('#pane_encoding-selection'),
   form: document.body.querySelector('#usr-input-form'),
   input: document.body.querySelector('#usr-input-input'),
   encodingText: document.body.querySelector('#usr-input-encoding-text'),
@@ -7,7 +9,9 @@ const userInputPane = {
 
 userInputPane.form.addEventListener('submit', (ev) => {
   ev.preventDefault();
-
+  userInputPane.pane.classList.add("fadeOut");
+  userInputPane.nextPane.classList.add("visible");
+  userInputPane.nextPane.classList.add("fadeIn");
 });
 
 userInputPane.input.addEventListener('input', (ev) => {

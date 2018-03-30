@@ -1,26 +1,47 @@
 /* MODULAR
 =============<*/
 .pane {
-  display: flex;
+  display: none;
   flex-direction: column;
+  position: absolute;
   width: 70%;
   max-width: 600px;;
   min-width: 500px;
   height: 80%;
   min-height: 628px;
   border: 10px solid hsl(200, 100%, 20%);
-
 }
 
 /* SPECIFIC
 =============<*/
 .pane_user-input {
-  /* display: none; */
+  display: flex;
 }
 
-.pane_encoding-selection {
-  display: none;
+.fadeOut {
+  animation: fadeOut 1s ease-in;
+  animation-fill-mode: both;
 }
-.pane_encoding-display {
-  display: none;
+
+.fadeIn {
+  animation: fadeIn 1s ease-in;
+  animation-fill-mode: both;
+}
+
+.visible {
+  display: flex;
+}
+
+/* .moveOut {
+  animation: moveOut 2s ease-in;
+} */
+
+@keyframes fadeOut {
+  0% {opacity: 1; right: calc(50% - 300px);}
+  100% {opacity: 0; right: calc(50% - 250px);}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0; }
+  100% {opacity: 1;}
 }

@@ -1,6 +1,6 @@
-/* .pane_user-input {
-  display: block;
-} */
+.pane_user-input {
+  opacity: 1;
+}
 
 .pane__h1_user-input {
   margin: 30px;
