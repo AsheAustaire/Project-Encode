@@ -1,4 +1,5 @@
 (function(){
+
   const userInputPane = {
     pane: document.body.querySelector('#pane_user-input'),
     nextPane: document.body.querySelector('#pane_encoding-selection'),
@@ -20,26 +21,24 @@
       userInputPane.encodingText.innerText = 'none';
       userInputPane.binaryText.innerText = 'none';
     } else {
-      displayEncoding()
+      encodingInfo()
     }
-    console.log(ev);
   })
 
-// Places Text Onto Screen
+//Set encoding
 
-  function displayEncoding() {
-    let encodingObj = getEncodingInfo(userInputPane.input.value.charCodeAt().toString(2));
-    userInputPane.encodingText.innerText =  encodingObj.encodingText;
-    userInputPane.binaryText.innerText =  encodingObj.binaryText;
-  }
-
-// Sets Encoding Obj w/ Appropriate Data
-
-  function getEncodingInfo(binaryText) {
-    let encodingObj = createEncodingObj();
-    encodingObj.encodingText = returnEncodingText(binaryText)
-    encodingObj.binaryText = returnBinaryText(binaryText)
-    return encodingObj
+  function encodingInfo() {
+    let binaryText = userInputPane.input.value.charCodeAt().toString(2)
+    if(binaryText === undefined) {
+      let encodingObj = createEncodingObj();
+      encodingObj.encodingText = returnEncodingText(binaryText)
+      encodingObj.binaryText = returnBinaryText(binaryText)
+      return encodingObj
+    } else {
+      let encodingObj = createEncodingObj(binary);
+      userInputPane.encodingText.innerText =  encodingObj.encodingText;
+      userInputPane.binaryText.innerText =  encodingObj.binaryText;
+    }
   }
 
 // Creates Empty Encoding Obj
@@ -53,57 +52,23 @@
 
 // Returns String For Encoding Text
 
-  function returnEncodingText(binaryText) {
-    let encodedTextString = [];
-    if(isUTF8(binaryText)) {
-      encodedTextString.push('UTF-8')
-    }
-    if(isUTF16(binaryText)) {
-      encodedTextString.push('UTF-16')
-    }
-    if(isUTF32(binaryText)) {
-      encodedTextString.push('UTF-32')
-    }
-    if(isASCII(binaryText)) {
-      encodedTextString.push('ASCII')
-    }
-    if(encodedTextString === '') {
-      encodedTextString.push('Could Not Identify')
-    }
 
-    return encodedTextString.join(' or ');
-  }
-
-// Checks Binary Text Against Encoding Type Traits
-    function isUTF8(binaryText) {
+    function resolveEncoding(binaryText) {
+      var types = [];
       if(binaryText.length < 8){
         return true
+        types.push('UTF-8')
       }
-      return true;
-    }
-// Checks Binary Text Against Encoding Type Traits
-    function isUTF16(binaryText) {
       if(binaryText.length > 8 && binaryText <= 16){
-        return true;
+        types.push('UTF-16')
       }
-    }
-// Checks Binary Text Against Encoding Type Traits
-    function isUTF32(binaryText) {
       if(binaryText.length > 16 && binaryText <= 32){
-        return true;
+        types.push('UTF-32')
       }
-    }
-// Checks Binary Text Against Encoding Type Traits
-    function isASCII(binaryText) {
       if(binaryText.length < 8){
-        return true;
+        types.push('ASCII')
       }
-    }
-// Checks Binary Text Against Encoding Type Traits
-    function isBIG5(binaryText) {
-      if(binaryText.length == 16){
-        return true;
-      }
+      return types.join(' or ');
     }
 
 // Returns String For Binary Text
