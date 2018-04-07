@@ -18,8 +18,7 @@
 
   userInputPane.input.addEventListener('input', (ev) => {
     if(userInputPane.input.value === '' || userInputPane.input.value === null) {
-      userInputPane.encodingText.innerText = 'none';
-      userInputPane.binaryText.innerText = 'none';
+      userInputPane.binaryText.innerHTML = 'none';
     } else {
       encodingInfo()
     }
@@ -28,48 +27,13 @@
 //Set encoding
 
   function encodingInfo() {
-    let binaryText = userInputPane.input.value.charCodeAt().toString(2)
-    if(binaryText === undefined) {
-      let encodingObj = createEncodingObj();
-      encodingObj.encodingText = returnEncodingText(binaryText)
-      encodingObj.binaryText = returnBinaryText(binaryText)
-      return encodingObj
+    let binaryText = userInputPane.input.value.charCodeAt().toString(2) // Convert user input into binary string
+    if (binaryText === undefined) {
+      userInputPane.binaryText.innerText =  'Invalid Character';
     } else {
-      let encodingObj = createEncodingObj(binary);
-      userInputPane.encodingText.innerText =  encodingObj.encodingText;
-      userInputPane.binaryText.innerText =  encodingObj.binaryText;
+      userInputPane.binaryText.innerText =  returnBinaryText(binaryText) ; // Modifies Unifished UTF-8 String
     }
   }
-
-// Creates Empty Encoding Obj
-
-  function createEncodingObj() {
-    return {
-      binaryText: '',
-      encodingText: ''
-    };
-  }
-
-// Returns String For Encoding Text
-
-
-    function resolveEncoding(binaryText) {
-      var types = [];
-      if(binaryText.length < 8){
-        return true
-        types.push('UTF-8')
-      }
-      if(binaryText.length > 8 && binaryText <= 16){
-        types.push('UTF-16')
-      }
-      if(binaryText.length > 16 && binaryText <= 32){
-        types.push('UTF-32')
-      }
-      if(binaryText.length < 8){
-        types.push('ASCII')
-      }
-      return types.join(' or ');
-    }
 
 // Returns String For Binary Text
 

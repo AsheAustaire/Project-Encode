@@ -15,19 +15,14 @@
       <form id='usr-input-form' class='form'>
         <h1 class='text__h1 pane__h1_user-input'>Input Character</h1>
         <input id='usr-input-input' class='pane__input_user-input' maxlength="1" autocomplete="off" type="text" name="character" value="">
-        <button class='button button_submit' type='submit' name='button'>submit</button>
+        <button class='button button_submit' type='submit' name='char-submit'>submit</button>
         <div class='pane__wrapper_user-input_bottom'>
-          <div class='pane__wrapper_user-input_bottom'>
-            <div class='pane__wrapper_user-input_current-encoding'>
-              <div class='pane_wrapper_user-input-sub'>
-                <h2 class='text__h2 pane__h2_user-input_current-encoding'>Possible Encoding</h2>
-                <h3 id='usr-input-encoding-text' class='text__h3 pane__h3_user-input_current-encoding'>none</h3>
-              </div>
-              <div class='pane_wrapper_user-input-sub'>
-                <h2 class='text__h2 pane__h2_user-input_in-binary'>In Binary</h2>
-                <h3 id='usr-input-binary-text' class='text__h3 pane__h3_user-input_current-encoding'>none</h3>
-              </div>
-            </div>
+          <div class='pane_wrapper_user-input-sub'>
+            <h2 class='text__h2 pane__h2_user-input_in-binary'>Encoded into UTF-8</h2>
+            <h3 id='usr-input-binary-text' class='text__h3 pane__h3_user-input_current-encoding'>
+              <!-- Dynamic Content Appears Here . . .  -->
+              none
+            </h3>
           </div>
         </div>
       </form>
@@ -43,7 +38,8 @@
           </div>
         </div>
       </div>
-      <div class='encoding-section'>
+
+      <div class='.pane_encoding-selection encoding-section'>
         <h1 class='text__h1 encoding-section__h1'>Chosen Types</h1>
         <div class='encoding-section__wrapper_tiles'>
           <div class='encoding-section__tile'>
@@ -74,7 +70,6 @@
       </div>
     </div>
   </div>
-
   <script src='./components/pane/pane_user-input/pane_user-input.js'></script>
 </body>
 
