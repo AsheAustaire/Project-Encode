@@ -53,14 +53,17 @@
 
   function _moveEncodingTypeFromAvailableToChosen(ev) {
     let clickedEle = ev.target;
+    clickedEle.remove();
     let chosenEle = html_encodingTileChosen(ev.target.id, ev.target.id);
     DOM.encodingTypesChosen.innerHTML += chosenEle ;
     let chosenImgClose = document.querySelector(`#${ev.target.id}__img_close`); // TODO:
-    clickedEle.remove();
-    chosenImgClose.addEventListener('click', () => {
+    // debugger
+    document.querySelector(`#${ev.target.id}__img_close`).addEventListener('click', __handleCloseImageClick)
+    debugger
+  }
+
+  function __handleCloseImageClick() {
       console.log('Build Out Close Function'); // TODO:
-    })
-    // clickedEle.removeEventListener('click', _moveEncodingTypeFromAvailableToChosen);
   }
 
 // }())
