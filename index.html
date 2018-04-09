@@ -29,40 +29,33 @@
     </div>
 
     <div id='pane_encoding-selection' class='pane pane_encoding-selection'>
-      <div class='encoding-section'>
-        <h1 class='text__h1 encoding-section__h1'>Encoding Types</h1>
-        <div class='encoding-section__wrapper_tiles'>
-          <div class='encoding-section__tile'>
-            <img class='encoding-section__img_x' src='./components/encoding-section/cancel.svg' />
-            <h3 class='text__h3 encoding-section__h3'>UTF-8</h3>
-          </div>
+      <div class='pane_encoding-section'>
+        <h1 class='text__h1 pane_encoding-section__h1'>Available Types</h1>
+        <div id='pane__encoding-section_available' class='pane_encoding-section__wrapper_tiles'>
+          <!-- Dynamic Content Appears Here . . .  -->
         </div>
       </div>
-
-      <div class='.pane_encoding-selection encoding-section'>
-        <h1 class='text__h1 encoding-section__h1'>Chosen Types</h1>
-        <div class='encoding-section__wrapper_tiles'>
-          <div class='encoding-section__tile'>
-            <img class='encoding-section__img_x' src='./components/encoding-section/cancel.svg' />
-            <h3 class='text__h3 encoding-section__h3'>UTF-8</h3>
-          </div>
+      <div class='pane_encoding-section'>
+        <h1 class='text__h1 pane_encoding-section__h1'>Chosen Types</h1>
+        <div id='pane__encoding-section_chosen' class='pane_encoding-section__wrapper_tiles'>
+            <!-- Dynamic Content Appears Here . . .  Encoding Types-->
         </div>
       </div>
     </div>
 
-    <div class='pane pane_encoding-display'>
-      <div class='encoding-display'>
-        <div class='encoding-display__wrapper_top'>
-          <h1 class='text__h2 encoding-display_h1'>Original Encoding</h1>
-          <h2 class='text__h3 encoding-display_h2'>UTF-8 A</h2>
+    <div class='pane pane_encoding--display'>
+      <div class='pane_encoding-display'>
+        <div class='pane_encoding-display__wrapper_top'>
+          <h1 class='text__h2 pane_encoding-display_h1'>Original Encoding</h1>
+          <h2 class='text__h3 pane_encoding-display_h2'>UTF-8 A</h2>
         </div>
-        <div class='encoding-display__wrapper_bottom'>
-          <div class='encoding-display__table'>
-            <div class='encoding-display__table__wrapper'>
-            <table class='encoding-display__table'>
-              <tr class='encoding-display__table_row'>
-                <td class='encoding-display__table_data'>UTF-8</td>
-                <td class='encoding-display__table_data'>A</td>
+        <div class='pane_encoding-display__wrapper_bottom'>
+          <div class='pane_encoding-display__table'>
+            <div class='pane_encoding-display__table__wrapper'>
+            <table class='pane_encoding-display__table'>
+              <tr class='pane_encoding-display__table_row'>
+                <td class='pane_encoding-display__table_data'>UTF-8</td>
+                <td class='pane_encoding-display__table_data'>A</td>
               </tr>
             </table>
           </div>
@@ -71,6 +64,7 @@
     </div>
   </div>
   <script src='./components/pane/pane_user-input/pane_user-input.js'></script>
+  <script src='./components/pane/pane_encoding-selection/pane_encoding-selection.js'></script>
 </body>
 
 </html>
@@ -86,7 +80,7 @@
       <textarea id='form__output_bin-string' class='form__output_bin-string' type="text" name="user-char" value=""></textarea>
     </div>
   </form>
-  <section class='encoding-tile'>
-    <h1 class='encoding-tile__h1'>TEST</h1>
+  <section class='pane_encoding-tile'>
+    <h1 class='pane_encoding-tile__h1'>TEST</h1>
 
   </section> -->

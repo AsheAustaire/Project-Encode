@@ -5,7 +5,7 @@
     nextPane: document.body.querySelector('#pane_encoding-selection'),
     form: document.body.querySelector('#usr-input-form'),
     input: document.body.querySelector('#usr-input-input'),
-    encodingText: document.body.querySelector('#usr-input-encoding-text'),
+    encodingText: document.body.querySelector('#usr-input-pane_encoding-text'),
     binaryText : document.body.querySelector('#usr-input-binary-text')
   }
 

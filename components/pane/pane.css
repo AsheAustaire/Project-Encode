@@ -4,9 +4,8 @@
   display: none;
   flex-direction: column;
   position: absolute;
-  width: 70%;
-  max-width: 600px;;
-  min-width: 500px;
+  width: 600px;
+  max-width: 600px;
   height: 80%;
   min-height: 628px;
   border: 10px solid hsl(200, 100%, 20%);
@@ -32,9 +31,6 @@
   display: flex;
 }
 
-/* .moveOut {
-  animation: moveOut 2s ease-in;
-} */
 
 @keyframes fadeOut {
   0% {opacity: 1; right: calc(50% - 305px);}

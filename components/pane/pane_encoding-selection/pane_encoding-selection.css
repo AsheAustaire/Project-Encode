@@ -1,6 +1,57 @@
 .pane_encoding-selection {
-  /* display: flex; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.pane_encoding-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+  user-select: none;
+}
+
+.pane_encoding-tile {
+  border: 2px solid hsl(0, 0%, 0%);
+}
+
+.pane_encoding-section__tile {
+  display: flex;
+  position: relative;
+  margin: 10px
+}
+
+.pane_encoding-section__h1 {
+  display: inline-block;
+  align-self: center;
+  margin: 30px 0;
+  pointer-events: none;
+}
+
+.pane_encoding-section__img_x {
+  width: 20px;
+  height: 20px;
+}
+
+.pane_encoding-section__wrapper_tiles {
+  margin: 30px;
+}
+
+.pane_encoding-section__tile {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px;
+  border: 2px dashed hsl(0, 0%, 0%);
+  transition: all .5s;
+}
+
+.pane_encoding-section__tile:hover {
+  border: 2px solid hsl(200, 100%, 20%);
+  transform: translateY(-5px);
+}
+
+.pane_encoding-section__h3 {
+  margin: 5px;
+  pointer-events: none;
 }

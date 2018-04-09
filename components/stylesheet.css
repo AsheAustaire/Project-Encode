@@ -10,7 +10,7 @@
 @import url('./table/table.css');
 @import url('./button/button.css');
 @import url('./pane/pane.css');
-@import url('./encoding-section/encoding-section.css');
+@import url('./pane/pane_encoding-selection/pane_encoding-selection.css');
 @import url('./button/button.css');
 
 /* SPECIFIC COMPONENTS

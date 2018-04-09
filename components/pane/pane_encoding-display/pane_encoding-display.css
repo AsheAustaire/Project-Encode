@@ -1,9 +1,9 @@
-.encoding-display {
+.pane_encoding-display {
   width: 100%;
   height: 100%;
 }
 
-.encoding-display__wrapper_top {
+.pane_encoding-display__wrapper_top {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -12,15 +12,15 @@
 
 }
 
-.encoding-display__wrapper_bottom {
+.pane_encoding-display__wrapper_bottom {
   height: 70%;
 }
 
-.encoding-display_h1 {
+.pane_encoding-display_h1 {
   text-align: center;
   margin: 30px;
 }
 
-.encoding-display_h2 {
+.pane_encoding-display_h2 {
   text-align: center;
 }
